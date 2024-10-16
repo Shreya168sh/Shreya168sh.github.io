@@ -11,3 +11,5 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+
+// Detect when sections are in the viewport for
