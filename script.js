@@ -12,4 +12,23 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
 });
 
-// Detect when sections are in the viewport for
+// Detect when sections are in the viewport for animations
+const sections = document.querySelectorAll('section');
+
+const options = {
+    root: null,
+    threshold: 0.1,
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible'); // Add visible class
+            observer.unobserve(entry.target); // Stop observing once visible
+        }
+    });
+}, options);
+
+sections.forEach(section => {
+    observer.observe(section); // Observe each section
+});
