@@ -1,50 +1,64 @@
-body {
-    font-family: 'Roboto', sans-serif; /* Use a modern font */
-    line-height: 1.6;
+* {
+    box-sizing: border-box;
     margin: 0;
-    padding: 20px;
-    background: linear-gradient(135deg, #0d0d0d 0%, #2c3e50 100%); /* Gradient background */
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, rgba(0, 188, 212, 0.9), rgba(44, 62, 80, 0.9)); /* Gradient background */
     color: #e0e0e0; /* Light text for contrast */
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 header {
-    background: rgba(31, 31, 31, 0.9); /* Semi-transparent background */
-    color: #00bcd4; /* Bright cyan color for header text */
-    padding: 20px 0;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* Subtle shadow for depth */
+    padding: 50px 0;
+    background: rgba(31, 31, 31, 0.9); /* Semi-transparent background */
+    border-bottom: 5px solid #00bcd4; /* Bright cyan border */
 }
 
-h1, h2, h3 {
+header h1 {
+    font-size: 3em;
+}
+
+header h2 {
+    font-size: 1.5em;
     margin: 10px 0;
 }
 
-section {
-    background: rgba(38, 38, 38, 0.9); /* Semi-transparent section background */
-    margin: 20px 0;
+.about, .skills, .projects, .achievements {
+    margin: 40px 0;
     padding: 20px;
+    background: rgba(38, 38, 38, 0.9); /* Semi-transparent section background */
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.7); /* Dark shadow for depth */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Dark shadow for depth */
 }
 
 h3 {
+    margin-bottom: 20px;
     border-bottom: 2px solid #00bcd4; /* Bright cyan for section headers */
-    padding-bottom: 5px;
-}
-
-ul, ol {
-    padding-left: 20px; /* Indent for lists */
+    padding-bottom: 10px;
 }
 
 ul {
     list-style-type: none; /* Removes bullets from the list */
+    padding-left: 0; /* Removes default padding */
 }
 
 footer {
     text-align: center;
-    margin-top: 30px;
-    border-top: 1px solid #00bcd4; /* Top border for footer */
-    padding-top: 10px;
+    padding: 20px 0;
+    background: rgba(31, 31, 31, 0.9);
+    margin-top: 40px;
+    border-top: 5px solid #00bcd4; /* Bright cyan border */
 }
 
 footer p {
@@ -52,7 +66,7 @@ footer p {
 }
 
 a {
-    color: #00bcd4; /* Bright cyan color for links */
+    color: #00bcd4; /* Bright cyan for links */
     text-decoration: none; /* Removes underline from links */
 }
 
