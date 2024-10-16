@@ -3,12 +3,12 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 20px;
-    background-color: #0d0d0d; /* Dark background for a tech feel */
+    background: linear-gradient(135deg, #0d0d0d 0%, #2c3e50 100%); /* Gradient background */
     color: #e0e0e0; /* Light text for contrast */
 }
 
 header {
-    background: #1f1f1f; /* Slightly lighter dark background */
+    background: rgba(31, 31, 31, 0.9); /* Semi-transparent background */
     color: #00bcd4; /* Bright cyan color for header text */
     padding: 20px 0;
     text-align: center;
@@ -20,7 +20,7 @@ h1, h2, h3 {
 }
 
 section {
-    background: #262626; /* Darker section background */
+    background: rgba(38, 38, 38, 0.9); /* Semi-transparent section background */
     margin: 20px 0;
     padding: 20px;
     border-radius: 10px;
