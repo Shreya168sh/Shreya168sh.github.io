@@ -15,15 +15,18 @@ header {
     text-align: center;
     padding: 100px 20px;
     background: rgba(31, 31, 31, 0.9);
+    animation: fadeIn 1s ease; /* Fade-in animation for header */
 }
 
 h1 {
     font-size: 3em;
+    animation: slideInLeft 0.5s ease; /* Slide-in animation for name */
 }
 
 h2 {
     font-size: 1.5em;
     margin: 10px 0;
+    animation: slideInLeft 0.7s ease; /* Slide-in animation for title */
 }
 
 .btn {
@@ -34,11 +37,12 @@ h2 {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 20px;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s; /* Smooth transition */
 }
 
 .btn:hover {
     background: #0097a7; /* Darker shade on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
 }
 
 nav {
@@ -62,14 +66,18 @@ nav ul li a {
     color: #00bcd4;
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s; /* Smooth transition */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #0097a7; /* Change color on hover */
 }
 
 section {
     padding: 40px 20px;
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
 }
 
 .container {
@@ -105,10 +113,37 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Underline links on hover */
 }
 
 /* Smooth Scroll */
 html {
     scroll-behavior: smooth;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation class for sections */
+.visible {
+    opacity: 1; /* Show element */
+    transform: translateY(0); /* Move to original position */
 }
